@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="'Hello, ' + ${name} + '!'"></title>
+    <link href="/css/main.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:replace="~{fragments/header}"></div>
+
+<div class="page">
+
+    <div class="main">
+        <h1>An about page</h1>
+    </div>
+
+</div>
+
+<div th:replace="~{fragments/footer}"></div>
+</body>
+</html>

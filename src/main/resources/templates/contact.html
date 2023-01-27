@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="'Hello, ' + ${name} + '!'"></title>
+    <link href="/css/main.css" rel="stylesheet">
+</head>
+<body>
+
+<div th:insert="~{fragments/header}"></div>
+
+<div class="page">
+
+    <div class="main">
+        <h1>A contact page</h1>
+    </div>
+
+</div>
+
+<div th:insert="~{fragments/footer}"></div>
+
+</body>
+</html>

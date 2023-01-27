@@ -1,33 +1,22 @@
 package dev.sarargh.ssrdemo.controllers;
 
-import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.*;
-
 @Controller
-public class HelloController {
-
-
-    public void addControllers() {
-        HashMap<String, String> menu = new HashMap<>();
-        menu.put("/", "Home");
-        menu.put("/about", "About us");
-        menu.put("/contact", "Contact us");
-    }
+public class WebController {
 
     @GetMapping({"/", "/hello"})
     public String hello(Model model,
-                        @RequestParam(
-                                value = "name",
-                                required = false,
-                                defaultValue = "World") String name) {
+                @RequestParam(
+                    value = "name",
+                    required = false,
+                    defaultValue = "World") String name) {
         model.addAttribute("name", name);
         model.addAttribute("module", "home");
-                return "hello";
+                return "home";
     }
 
     @GetMapping("/about")

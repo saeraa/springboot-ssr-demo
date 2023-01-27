@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<header>
+
+    <nav>
+        <ul>
+            <li th:classappend="${module == 'home' ? 'active' : 'inactive'}">
+                <a href="#" th:href="@{/}">Home</a>
+            </li>
+            <li th:classappend="${module == 'about' ? 'active' : 'inactive'}">
+                <a href="#" th:href="@{/about}">About</a>
+            </li>
+            <li th:classappend="${module == 'contact' ? 'active' : 'inactive'}">
+                <a href="#" th:href="@{/contact}">Contact</a>
+            </li>
+<!--          <li class="menu-item {{#if this.active}}active{{else}}inactive{{/if}}">-->
+<!--              <a href="{{this.link}}">{{this.label}}</a>-->
+<!--          </li>-->
+<!--          {{/each}}-->
+        </ul>
+    </nav>
+</header>
+</body>
+</html>
